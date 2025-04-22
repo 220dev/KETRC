@@ -1,0 +1,279 @@
+@font-face {
+  font-family: 'Paperlogy-8ExtraBold';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-8ExtraBold.woff2') format('woff2');
+  font-weight: 800;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Pretendard-Regular';
+  src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+body {
+  font-family: 'Pretendard-Regular';
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+header {
+  position: relative;
+}
+/* .top-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  box-sizing: border-box;
+  background-color: white;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+} */
+/* top-bar 설정 */
+.top-bar {
+  position: fixed;         /* ← 스크롤해도 고정되게 */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.05); /* 선택사항: 살짝 그림자 */
+}
+
+/* 로고 */
+.logo {
+  height: 30px;  /* 로고 크기 조정 */
+}
+
+/* 햄버거 버튼 */
+.hamburger {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 30px;
+  height: 22px;
+  cursor: pointer;
+  z-index: 1100;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* 햄버거 라인 */
+/* 기본 상태: 어두운 햄버거 */
+.hamburger span {
+  height: 3px;
+  width: 100%;
+  background: #333; /* 처음에는 어두운색 */
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+/* 사이드바 열렸을 때: 흰색 X */
+.hamburger.active span:nth-child(1),
+.hamburger.active span:nth-child(3) {
+  background: #fff;
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+  transform: scale(0);
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+.logo {
+  height: 30px;
+}
+.menu-icon {
+  height: 20px;
+}
+.main-image {
+  width: 100%;
+  display: block;
+  margin-top: 50px;
+}
+.main-text {
+  font-family: 'Paperlogy-8ExtraBold';
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  font-size: 1.7em;
+  font-weight: bold;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+  white-space: pre-line;
+  z-index: 1;
+  width: 100%;
+  padding: 0 10px;
+  box-sizing: border-box;
+}
+section {
+  padding: 20px;
+}
+h2, h3 {
+  text-align: center;
+  margin-top: 30px;
+}
+p {
+  margin: 10px 0;
+  text-align: center;
+}
+.section-img {
+  width: 100%;
+  display: block;
+  margin: 20px 0;
+}
+.highlight-box {
+  background-color: #f4f4e9;
+  padding: 10px;
+  font-size: 15px;
+}
+.value-list p {
+  text-align: left;
+  margin: 5px 0;
+}
+.value-list {
+  margin-top: 20px;
+}
+
+.value-list p.title {
+  font-size: 18px;
+  font-weight: 800;
+}
+
+/* Business */
+.business {
+  margin-bottom: 80px;
+}
+
+.business img {
+  width: 100%;
+}
+
+.business p {
+  text-align: left;
+}
+
+.business-list {
+  margin-bottom: 20px;
+}
+
+.business-list p.title {
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.rnd img {
+  width: 100%;
+}
+
+.partners img {
+  width: 100%;
+}
+
+/* contact */
+.contact {
+  background: #f4f4f4;
+}
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #0c684d;
+  color: white;
+}
+
+/* side bar */
+.hamburger {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  width: 30px;
+  height: 22px;
+  z-index: 1100;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.hamburger span {
+  display: block;
+  height: 4px;
+  background: #333;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+/* X 모양으로 변형 */
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* 사이드바 */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -250px;
+  width: 250px;
+  height: 100%;
+  background-color: #222;
+  color: white;
+  padding-top: 80px;
+  transition: left 0.3s ease;
+  z-index: 1000;
+}
+
+.sidebar.open {
+  left: 0;
+}
+
+.sidebar a {
+  display: block;
+  padding: 15px 20px;
+  color: white;
+  text-decoration: none;
+}
+
+.sidebar a:hover {
+  background-color: #444;
+}
+
+/* 오버레이 */
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 900;
+}
+
+.overlay.show {
+  display: block;
+}
