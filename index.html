@@ -24,6 +24,7 @@
     </div>
   </header>
   <div class="sidebar" id="sidebar">
+    <button class="close-btn" id="close-btn">✕</button>
     <a href="#about">About</a>
     <a href="#vision">Vision</a>
     <a href="#values">Values</a>
@@ -184,9 +185,9 @@
     const hamburger = document.getElementById('hamburger');
     const sidebar = document.getElementById('sidebar');
     const overlay = document.getElementById('overlay');
-  
+    const closeBtn = document.getElementById('close-btn'); 
+
     hamburger.addEventListener('click', () => {
-      hamburger.classList.toggle('active');
       sidebar.classList.toggle('open');
       overlay.classList.toggle('show');
     });
@@ -196,16 +197,21 @@
       sidebar.classList.remove('open');
       overlay.classList.remove('show');
     });
-
+  
+    closeBtn.addEventListener('click', () => {
+      hamburger.classList.remove('active');
+      sidebar.classList.remove('open');
+      overlay.classList.remove('show');
+    });
+  
     const sidebarLinks = document.querySelectorAll('.sidebar a');
-
-sidebarLinks.forEach(link => {
-  link.addEventListener('click', () => {
-    hamburger.classList.remove('active');
-    sidebar.classList.remove('open');
-    overlay.classList.remove('show');
-  });
-});
+    sidebarLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        hamburger.classList.remove('active');
+        sidebar.classList.remove('open');
+        overlay.classList.remove('show');
+      });
+    });
   </script>
 </body>
 </html>
